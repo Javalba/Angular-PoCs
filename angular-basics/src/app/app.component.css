@@ -1,0 +1,24 @@
+ul {
+  list-style: none;
+}
+
+.status {
+  width: 10px;
+  height: 10px;
+  background: red;
+  display: block;
+  margin: 8px 10px 0 0;
+  float: left;
+  border-radius: 50%;
+}
+
+.status.checked-in {
+  background: green;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 black;
+  transition: 0.3s;
+  padding: 2px 16px;
+  margin: 25px 0;
+}
