@@ -1,5 +1,5 @@
+import { Passenger } from './../../models/passenger.interface';
 import { Component, OnInit } from '@angular/core';
-import { Passenger } from '../../models/passenger.interface';
 
 @Component({
   selector: 'passenger-dashboard',
@@ -8,12 +8,12 @@ import { Passenger } from '../../models/passenger.interface';
 })
 export class PassengerDashboardComponent implements OnInit {
 
-  title = 'app';
-
   defaultFlag: string = 'european-union.svg';
   passengers: Passenger[];
+  display: boolean;
 
   ngOnInit() {
+
     this.passengers = [{
       id: 1,
       fullname: 'Stephen',
@@ -49,6 +49,31 @@ export class PassengerDashboardComponent implements OnInit {
       nationality: 'united-kingdom.svg'
     }
     ]
+  }
+
+/**
+ * Inmutable objects
+ *  In this case we’ll use Object.assign to create a new object and assign it to the value passenger,
+ *  that will be included into the final array that will return.
+ */
+  handleEdit(event) {
+    this.passengers = this.passengers.map((passenger: Passenger) => {
+      if (passenger.id === event.id) {
+        passenger = Object.assign({}, passenger, event);
+      }
+      return passenger;
+    });
+  console.log(this.passengers);
+  }
+
+  handleRemove(event) {
+    this.passengers = this.passengers.filter((passenger: Passenger) => {
+      return passenger.id !== event.id;
+    });
+  }
+
+  handleFilter(display: boolean){
+    this.display = display;
   }
 
 }
