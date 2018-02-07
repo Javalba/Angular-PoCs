@@ -1,3 +1,4 @@
+import { PassengerDashboardService } from './services/passenger-dashboard.service';
 import { CommonModule } from '@angular/common';
 import { NgModule } from "@angular/core";
 
@@ -17,6 +18,9 @@ import { PassengerInfoComponent } from './components/passenger-info/passenger-in
   ],
   exports: [
     PassengerDashboardComponent //The rest of components are referred internally.
+  ],
+  providers: [
+    PassengerDashboardService
   ]
 })
 

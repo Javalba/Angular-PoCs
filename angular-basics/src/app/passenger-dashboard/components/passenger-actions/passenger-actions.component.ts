@@ -15,8 +15,6 @@ export class PassengerActionsComponent implements OnInit {
 
   filterPassengers(value: any) {
     this.display = value;
-    console.log(value);
-
     this.filter.emit(this.display);
   }
 
