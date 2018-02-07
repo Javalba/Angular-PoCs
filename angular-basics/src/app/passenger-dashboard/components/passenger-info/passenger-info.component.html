@@ -1,0 +1,20 @@
+
+<div *ngIf="passenger" class="card">
+  <div> ID: {{  passenger.id }}</div>
+  <div> Name: {{ passenger.fullname }} </div>
+  <div> Checked In {{passenger.checkedIn ? 'Yes' : 'No'}} </div>
+  <div>Checked in Date: {{(
+    passenger.CheckInDate ? (passenger.checkInDate | date: 'MMMM d, y' ) : 'Not checked in'
+    ) | uppercase }}</div>
+
+    <div>
+      Nationality:
+      <img src="assets/img/flags/{{passenger.nationality ? passenger.nationality : defaultFlag}}" alt="" width="17">
+    </div>
+    <div>
+      Children:
+      <ul>
+        <li *ngFor="let child of passenger.children"> {{ child.name }} || {{ child.age }} </li>
+      </ul>
+    </div>
+</div> 

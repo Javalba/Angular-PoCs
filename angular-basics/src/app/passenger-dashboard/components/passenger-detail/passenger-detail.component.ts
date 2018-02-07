@@ -23,6 +23,9 @@ export class PassengerDetailComponent implements OnInit {
   @Output()
   edit: EventEmitter<Passenger> = new EventEmitter();
 
+  @Output()
+  select: EventEmitter<Passenger> = new EventEmitter();
+
   onNameChange(value: string) {
     this.detail.fullname = value;
   }
@@ -41,6 +44,10 @@ export class PassengerDetailComponent implements OnInit {
     this.detail.checkedIn=true;
     this.detail.checkInDate = Date.now();
     this.edit.emit(this.detail);
+  }
+
+  onSelect() {
+    this.select.emit(this.detail);
   }
 
 

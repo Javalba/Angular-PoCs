@@ -8,9 +8,10 @@ import { PassengerDashboardComponent } from './container/passenger-dashboard/pas
 import { PassengerActionsComponent } from './components/passenger-actions/passenger-actions.component';
 import { PassengerCountComponent } from './components/passenger-count/passenger-count.component';
 import { PassengerDetailComponent } from './components/passenger-detail/passenger-detail.component';
+import { PassengerInfoComponent } from './components/passenger-info/passenger-info.component';
 
 @NgModule({
-  declarations:[PassengerDashboardComponent, PassengerActionsComponent, PassengerCountComponent, PassengerDetailComponent],
+  declarations:[PassengerDashboardComponent, PassengerActionsComponent, PassengerCountComponent, PassengerDetailComponent, PassengerInfoComponent],
   imports:[
     CommonModule
   ],

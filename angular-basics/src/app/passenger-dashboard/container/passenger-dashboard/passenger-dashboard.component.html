@@ -1,8 +1,7 @@
 <div class="app">
 
     <passenger-count [items]="passengers"></passenger-count>
-    <passenger-actions
-    (filter) = "handleFilter($event)"></passenger-actions>
+    <passenger-actions (filter) = "handleFilter($event)"></passenger-actions>
 
   <h3>Airline Passengers</h3>
     <ul>
@@ -12,7 +11,12 @@
         [display]="display"
         (remove)="handleRemove($event)"
         (edit)="handleEdit($event)"
+        (select)="handleSelect($event)"
         >
       </passenger-detail>
     </ul>
+
+    <div class="right">
+      <passenger-info [passenger] = "selectedPassenger" ></passenger-info>
+    </div>
   </div>

@@ -11,6 +11,7 @@ export class PassengerDashboardComponent implements OnInit {
   defaultFlag: string = 'european-union.svg';
   passengers: Passenger[];
   display: boolean;
+  selectedPassenger: Passenger;
 
   ngOnInit() {
 
@@ -76,4 +77,7 @@ export class PassengerDashboardComponent implements OnInit {
     this.display = display;
   }
 
+  handleSelect(passenger: Passenger){
+    this.selectedPassenger = passenger;
+  }
 }

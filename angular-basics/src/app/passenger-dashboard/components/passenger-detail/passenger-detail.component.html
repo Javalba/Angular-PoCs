@@ -26,17 +26,24 @@
   </div>
 
   <div class="passenger-detail-actions">
+    <button (click)="onSelect()">
+      Select
+    </button>
+
     <button (click)="toggleEdit()">
       {{ editing ? 'Done' : 'Edit'}}
     </button>
+
     <button (click)="onRemove()">
       Remove
     </button>
+
     <button
     *ngIf="!detail.checkedIn"
     (click)="onCheckIn()">
     CheckIn
     </button>
+    
   </div>
 </div>
 
