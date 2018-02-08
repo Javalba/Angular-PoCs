@@ -7,9 +7,13 @@ import { Routes, RouterModule } from '@angular/router';
 export const routes: Routes = [{
     path: '',
     component: DashboardComponent,
-    pathMatch: 'full',
+/*     children: [
+      {
+        path: 'gallery',
+        loadChildren: 'app/dashboard/components/gallery/gallery.module#GalleryModule'
+      },
+    ] */
   },
-
   {
     path: 'gallery',
     loadChildren: 'app/dashboard/components/gallery/gallery.module#GalleryModule'
