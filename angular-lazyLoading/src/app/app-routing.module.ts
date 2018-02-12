@@ -16,7 +16,7 @@ export const routes: Routes = [{
     path: 'about',
     loadChildren: 'app/dashboard/components/about/about.module#AboutModule'
 
-  }
+  },
   {
     path: '**',
     redirectTo: '/'
@@ -24,14 +24,3 @@ export const routes: Routes = [{
 ];
 
 export const appRouter: ModuleWithProviders = RouterModule.forRoot(routes);
-
-
-
-/* @NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: []
-})
-export class AppRoutingModule { }
- */
