@@ -7,12 +7,6 @@ import { Routes, RouterModule } from '@angular/router';
 export const routes: Routes = [{
     path: '',
     component: DashboardComponent,
-/*     children: [
-      {
-        path: 'gallery',
-        loadChildren: 'app/dashboard/components/gallery/gallery.module#GalleryModule'
-      },
-    ] */
   },
   {
     path: 'gallery',
@@ -22,7 +16,7 @@ export const routes: Routes = [{
     path: 'about',
     loadChildren: 'app/dashboard/components/about/about.module#AboutModule'
 
-  },
+  }
   {
     path: '**',
     redirectTo: '/'
