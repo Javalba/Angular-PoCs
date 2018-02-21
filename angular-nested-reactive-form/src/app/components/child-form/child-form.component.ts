@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { ControlContainer } from '@angular/forms';
 
 @Component({
-  selector: 'app-child-form',
+  selector: 'child-form',
   templateUrl: './child-form.component.html',
   styleUrls: ['./child-form.component.css']
 })
 export class ChildFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(public controlContainer: ControlContainer) { }
 
   ngOnInit() {
   }

@@ -1,3 +1,18 @@
-<p>
-{{users}}
-</p>
+<p>Parent Form</p>
+<form [formGroup]=form>
+
+  <child-form formGroupName=nested></child-form>
+
+  <br>
+  <br>
+  <label for="email">Email:
+    <input type=text formControlName=email [value]={{users[0].email}}>
+  </label>
+  <label for="address">Address:
+      <input type=text formControlName=address>
+    </label>
+
+</form>
+
+<pre>{{ form.value | json }}</pre>
+
