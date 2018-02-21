@@ -1,0 +1,26 @@
+{
+  "users": [{
+      "id": 1,
+      "identification": 123456789,
+      "name": "Javier",
+      "surname": "Armero",
+      "email": "email@email.com",
+      "addresses": [
+          {"street": "123 Main",  "city": "Anywhere", "state": "CA",  "zip": "94801"},
+          {"street": "456 Maple", "city": "Somewhere", "state": "VA", "zip": "23226"}
+      ]
+    },
+    {
+      "id": 2,
+      "identification": 987654321,
+      "name": "Javalba",
+      "surname": "Armero",
+      "email": "email@email.com",
+      "addresses": [
+          {"street": "123 Main",  "city": "Anywhere", "state": "CA",  "zip": "94801"},
+          {"street": "456 Maple", "city": "Somewhere", "state": "VA", "zip": "23226"}
+      ]
+    }
+  ]
+}
+
