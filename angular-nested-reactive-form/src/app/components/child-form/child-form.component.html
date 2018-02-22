@@ -1,12 +1,21 @@
 <ng-container [formGroup]="controlContainer.control">
-  <label for="id">Id:
-    <input type=text formControlName=id>
-  </label>
-  <label for="name">Name:
-    <input type=text formControlName=name>
-  </label>
-  <label for="surname">Surname:
-      <input type=text formControlName=surname>
+  <div *ngIf="users">
+    <label for="id">Id:
+      <input type=text formControlName=id>
     </label>
-</ng-container>
+    <label for="name">Name:
+      <input type=text formControlName=name>
 
+    </label>
+    <label for="surname">Surname:
+        <input type=text formControlName=surname value="{{users.surname}}">
+    </label>
+
+    <label for="surname">Addresses:
+      <select formControlName=address>
+        <option *ngFor="let address of users.addresses">{{address.city}}</option>
+      </select>
+    </label>
+
+  </div>
+</ng-container>

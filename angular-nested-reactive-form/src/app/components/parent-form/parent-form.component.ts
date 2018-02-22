@@ -18,22 +18,42 @@ export class ParentFormComponent implements OnInit {
     nested: this.fb.group({
       id: '',
       name: '',
-      surname: ''
+      surname: '',
+      address: ''
     }),
     email: '',
-    address: '',
   })
 
 
 
   ngOnInit() {
-    this.userService.getUsers().subscribe(
-      (data: User[]) =>{
-        this.users = data;
-        console.log(this.users[0].name);
-      });
+    
+    this.form.setValue({
+      email: 'this.users[1].email',
+      nested: {
+        id: 'this.users[1].id',
+        name:' this.users[1].name',
+        surname: 'this.users[1].surname',
+        address: 'ad',
+      }});
+//     this.userService.getUsers().subscribe(
+//       (data: User[]) =>{
+//         this.users = data;
+//         console.log(this.users[0].name);
+//         console.log("FORM:");
+//         console.log(this.form);
+// /*         this.form.controls.email.setValue(this.users[0].email); */
+        
+//         });
+/*         this.form.find('username').updateValue(user.username);
+        this.form.find('email').updateValue(user.email); */
 
+        //this.form.controls.id.updateValueAndValidity(this.users[0].name);
+        //this.form.setValue({id: this.users[0].id, name: this.users[0].name, surname: this.users[0].surname})
+/*         this.form.get('name').setValue(this.users[0].name);
+        this.form.controls({username: this.user.username, mail: this.user.mail}) */
 
+      
   }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ControlContainer } from '@angular/forms';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'child-form',
@@ -8,9 +9,13 @@ import { ControlContainer } from '@angular/forms';
 })
 export class ChildFormComponent implements OnInit {
 
-  constructor(public controlContainer: ControlContainer) { }
+  users;
+  constructor(public controlContainer: ControlContainer, private userService: UserService,) { }
 
   ngOnInit() {
+    this.userService.getUsers().
+      subscribe(users => {this.users = users[0]; console.log(this.users[0]);
+      });
   }
 
 }
