@@ -1,7 +1,12 @@
 <div class="app">
 
     <passenger-count [items]="passengers"></passenger-count>
-    <passenger-actions (filter) = "handleFilter($event)"></passenger-actions>
+    <passenger-actions
+     (filter) = "handleFilter($event)"
+     (add) = "handleAddPassenger()";
+     >
+
+    </passenger-actions>
 
   <h3>Airline Passengers</h3>
     <ul>
@@ -17,6 +22,6 @@
     </ul>
 
     <div class="right">
-      <passenger-info [passenger] = "selectedPassenger" ></passenger-info>
+      <passenger-info [passenger] = "selectedPassenger" [add]="enableNewPassenger" ></passenger-info>
     </div>
   </div>

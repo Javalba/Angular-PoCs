@@ -13,6 +13,7 @@ export class PassengerDashboardComponent implements OnInit {
   passengers: Passenger[];
   display: boolean;
   selectedPassenger: Passenger;
+  enableNewPassanger: boolean;
 
   constructor(private passengerService: PassengerDashboardService){}
 
@@ -49,4 +50,9 @@ export class PassengerDashboardComponent implements OnInit {
   handleSelect(passenger: Passenger){
     this.selectedPassenger = passenger;
   }
+
+  handleAddPassenger(){
+    this.enableNewPassanger = true;
+  }
+
 }

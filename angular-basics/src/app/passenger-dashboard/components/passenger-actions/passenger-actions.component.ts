@@ -11,6 +11,9 @@ export class PassengerActionsComponent implements OnInit {
   @Output()
   filter: EventEmitter<boolean> = new EventEmitter();
 
+  @Output()
+  add: EventEmitter<boolean> =  new EventEmitter();
+
   constructor() { }
 
   filterPassengers(value: any) {
@@ -18,7 +21,10 @@ export class PassengerActionsComponent implements OnInit {
     this.filter.emit(this.display);
   }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  addPassenger(){
+    this.add.emit();
   }
 
 }
